@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Popup Example</title>
+    <link rel="stylesheet" href="pop.css">
+</head>
+<body>
+
+    <button id="openPopupBtn">Open Popup</button>
+    <div class="overlay" id="overlay"></div>
+    <div class="popup" id="popup">
+        <p>popup.</p>
+        <button id="closePopupBtn">Close</button>
+    </div>
+    <script>
+        
+        var openPopupBtn = document.getElementById('openPopupBtn');
+        var overlay = document.getElementById('overlay');
+        var popup = document.getElementById('popup');
+        var closePopupBtn = document.getElementById('closePopupBtn');
+    
+        function openPopup() {
+            overlay.style.display = 'flex'; 
+            popup.style.display = 'block';
+        }
+    
+        
+        function closePopup() {
+            overlay.style.display = 'none'; 
+            popup.style.display = 'none';
+        }
+        openPopupBtn.addEventListener('click', openPopup);
+        closePopupBtn.addEventListener('click', closePopup);
+    </script>
+    
+
+</body>
+</html>
